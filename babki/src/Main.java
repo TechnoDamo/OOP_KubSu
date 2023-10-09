@@ -7,8 +7,8 @@ public class Main {
         money m = new money(10, 10);
         m.print();
         System.out.println();
-        m.add(100, 1000);
-        m.print();
+        money M = m.add(m);
+        M.print();
 
         }
     }
