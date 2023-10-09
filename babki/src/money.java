@@ -1,36 +1,30 @@
 public class money {
     int rub;
     int cop;
-    int smR = 0, smCop = 0;
+
     money()
     {
         this.rub = 0;
         this.cop = 0;
-        smR += rub;
-        smCop = cop;
     }
     money(int rub)
     {
         this.rub = rub;
         this.cop = 0;
-        smR += rub;
-        smCop = cop;
     }
     money(int rub, int cop)
     {
         this.rub = rub+cop/100;
         this.cop = cop%100;
-        smR += rub;
-        smCop = cop;
     }
-    void  add(int rub)
+    money add(money m)
     {
-        this.rub+=rub;
-    }
-    void  add(int rub, int cop)
-    {
-        this.rub+=rub+cop/100;
-        this.cop+=cop%100;
+        int smR = this.rub;
+        int smC = this.cop;
+        smR += (m.getRub() + m.getCop()/100);
+        smC += (m.getCop()%100);
+        money M = new money(smR, smC);
+        return M;
     }
     int getRub() {
         return rub;
