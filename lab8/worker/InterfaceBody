@@ -37,6 +37,7 @@ public class InterfaceWorker {
                 f[i] = W;
             }
         }
+        Arrays.sort(f, Comparator.comparingDouble(Worker::salary));
         for(int i = 0; i < k; i++)
         {
             f[i].print();
