@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class percents implements Worker{
     int price, percent, age;
     String fio;
-    Scanner sc = new Scanner(System.in);
     percents(String fio, int age, int price, int percent)
 
     {
@@ -12,10 +11,11 @@ public class percents implements Worker{
         this.price = price;
         this.percent = percent;
     }
-    public double outCome(){
+    public double salary(){
         return price*percent*0.01;
     }
+    @Override
     public void print(){
-        System.out.println("fio: = "+fio+" age: "+age+" total outcome:"+outCome());
+        System.out.println("fio: = "+fio+" age: "+age+" total outcome:"+salary());
     }
 }
