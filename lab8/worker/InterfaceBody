@@ -13,7 +13,7 @@ public class InterfaceWorker {
             if(p==1)
             {
                 System.out.println("Input fio: ");
-                String fio = sc.nextLine();
+                String fio = sc.next();
                 System.out.println("Input age: ");
                 int age = sc.nextInt();
                 System.out.println("Input total income: ");
@@ -26,7 +26,7 @@ public class InterfaceWorker {
             if(p==2)
             {
                 System.out.println("Input fio: ");
-                String fio = sc.nextLine();
+                String fio = sc.next();
                 System.out.println("Input age: ");
                 int age = sc.nextInt();
                 System.out.println("Input price per hour: ");
@@ -40,7 +40,6 @@ public class InterfaceWorker {
         for(int i = 0; i < k; i++)
         {
             f[i].print();
-            System.out.println("S = "+f[i].print());
         }
     }
 }
