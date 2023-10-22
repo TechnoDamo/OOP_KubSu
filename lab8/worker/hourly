@@ -2,19 +2,18 @@ import java.util.*;
 public class hourly implements Worker{
     int price, hours, age;
     String fio;
-    Scanner sc = new Scanner(System.in);
     hourly(String fio, int age, int price, int hours)
-
     {
-        this.fio = sc.nextLine();
-        this.age = sc.nextInt();
+        this.fio = fio;
+        this.age = age;
         this.price = price;
         this.hours = hours;
     }
-    public double outCome(){
+    public double salary(){
         return price*hours;
     }
+    @Override
     public void print(){
-        System.out.println("fio: = "+fio+" age: "+age+" total outcome:"+outCome());
+        System.out.println("fio: = "+fio+" age: "+age+" total outcome:"+salary());
     }
 }
