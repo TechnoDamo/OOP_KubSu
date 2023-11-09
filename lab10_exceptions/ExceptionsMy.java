@@ -10,7 +10,10 @@ public class ExceptionsMy {
         int y = sc.nextInt();
         try {
             Data date = new Data(d, m, y);
-            //method call
+            date.print();
+            System.out.println(date.dayNum());
+            date.addDays(186);
+            date.print();
         }
         catch(MyException e)
         {System.out.println(e.getMessage()+" "+e.getDate());}
