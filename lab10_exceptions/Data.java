@@ -24,7 +24,7 @@ public class Data {
         y += extraYears;
         extraDays -= (extraYears * 365 + k);
 
-        m = newM(m, extraDays);// в newM поменяли количество extraDays
+        m = newM(m-1, extraDays);// в newM поменяли количество extraDays
     }
 
     // посчитать номер дня с начала года
