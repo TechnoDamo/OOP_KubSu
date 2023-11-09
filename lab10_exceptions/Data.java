@@ -1,7 +1,9 @@
 public class Data {
     int d, m, y;
     Data(int d, int m, int y) throws MyException {
-        if (d > 31 || m > 12 || y < 0 || d < 0 || m < 0) throw new MyException("Incorrect date", d, m, y);
+        int []months = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        if(y % 4 == 0) { months[1] = 29; }
+        if (d > months[m-1] || m > 12 || y < 0 || d < 0 || m < 0) throw new MyException("Incorrect date", d, m, y);
         this.d = d;
         this.m = m;
         this.y = y;
