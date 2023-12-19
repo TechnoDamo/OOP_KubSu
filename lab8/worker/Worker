@@ -1,4 +1,0 @@
-public interface Worker {
-    double salary();
-    void print();
-}
